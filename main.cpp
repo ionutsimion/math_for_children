@@ -201,14 +201,11 @@ namespace
 int main()
 {
     // TEST: { 100:5 - x * [(-1 + 77):4]} * 10 = 0
-    for (;;)
+    do
     {
         auto expression = parse_expression(read_expression());
-        if (!try_again())
-        {
-            break;
-        }
     }
+    while (try_again());
 
     return 0;
 }
